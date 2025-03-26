@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taj Event Management</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header>
+        <h1>Taj Events</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#venues">Venues</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#booking">Book an Event</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+
+        <section class="hero" id="home">
+            <video autoplay loop muted>
+                <source src="videos/party.mp4"video/mp4">
+            </video>
+            <div class="hero-text">
+                <h1>Host Your Dream Event in Luxury</h2>
+                <a href="#booking" class="btn">Book Now</a>
+            </div>
+        </section>
+
+    
+
+    <!-- Venues Section -->
+    <section class="venues" id="venues">
+        <h2>Choose Your Venue</h2>
+        <div class="venue-container">
+            <div class="venue">
+                <img src="images/m_view.jpg" alt="Mountain Venue">
+                <h3>Mountain Retreat</h3>
+            </div>
+            <div class="venue">
+                <img src="images/o_view.webp" alt="Beach Venue">
+                <h3>Beachside Elegance</h3>
+            </div>
+            <div class="venue">
+                <img src="images/city_view.jpg" alt="City Venue">
+                <h3>City Luxury</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h2>Past Events</h2>
+        <div class="gallery-container">
+            <img src="images/wedding.jpg" alt="Luxury Wedding">
+            <img src="images/party.webp" alt="Grand Party">
+            <img src="images/meeting.webp" alt="Corporate Meeting">
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-form" id="booking">
+        <div class="booking_in">
+            <h2>Book Your Event</h2>
+        <form id="eventForm">
+            <label>Name:</label>
+            <input type="text" required>
+            
+            <label>Email:</label>
+            <input type="email" required>
+            
+            <label>Event Type:</label>
+            <select>
+                <option>Wedding</option>
+                <option>Party</option>
+                <option>Business Meeting</option>
+            </select>
+
+            <label>Date:</label>
+            <input type="date" required>
+
+            <button type="submit">Check Availability</button>
+        </form>
+
+        </div>
+        
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById("eventForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Your booking request has been submitted! We will contact you soon.");
+        });
+    </script>
+
+</body>
+</html>
